@@ -15,21 +15,13 @@ import com.example.suriya.newreadermvvm.repositories.ListNewsRepositories
 import com.example.suriya.newreadermvvm.view.base.BaseFragment
 import com.example.suriya.newreadermvvm.viewmodel.listnews.ListNewsViewModel
 import com.example.suriya.newreadermvvm.viewmodel.listnews.ListNewsViewModelFactory
-import dagger.android.support.AndroidSupportInjection
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo
-import javax.inject.Inject
 
 class ListNewsFragment : BaseFragment() {
 
     private lateinit var binding: ListNewsFragmentBinding
     private val compositeDisposable = CompositeDisposable()
-   // @Inject lateinit var listNewsRepo: ListNewsRepositories
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        AndroidSupportInjection.inject(this)
-        super.onCreate(savedInstanceState)
-    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
