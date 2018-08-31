@@ -70,11 +70,11 @@ dependencies {
     annotationProcessor 'org.parceler:parceler:1.1.9'
 
     // Dagger2
-    implementation 'com.google.dagger:dagger:2.11'
-    implementation "com.google.dagger:dagger-android-support:2.11"
-    kapt 'com.google.dagger:dagger-compiler:2.11'
-    compileOnly 'javax.annotation:jsr250-api:1.0'
-    kapt 'com.google.dagger:dagger-android-processor:2.11'
+    implementation "com.google.dagger:dagger:$dagger2_version"
+    implementation "com.google.dagger:dagger-android:$dagger2_version"
+    implementation "com.google.dagger:dagger-android-support:$dagger2_version"
+    kapt "com.google.dagger:dagger-compiler:$dagger2_version"
+    kapt "com.google.dagger:dagger-android-processor:$dagger2_version"
 
     // OkHttp
     implementation 'com.squareup.okhttp3:okhttp:3.10.0'
