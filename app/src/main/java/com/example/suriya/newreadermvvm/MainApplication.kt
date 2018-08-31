@@ -1,13 +1,10 @@
 package com.example.suriya.newreadermvvm
 
-import android.app.Activity
-import android.app.Application
 import android.content.Context
-import android.support.v7.app.AppCompatActivity
 import com.example.suriya.newreadermvvm.di.DaggerAppComponent
 import com.example.suriya.newreadermvvm.di.NetworkModule
-import dagger.android.*
-import javax.inject.Inject
+import dagger.android.AndroidInjector
+import dagger.android.DaggerApplication
 
 class MainApplication : DaggerApplication() {
 

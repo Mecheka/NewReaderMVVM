@@ -14,12 +14,9 @@ import android.widget.LinearLayout
 import com.example.suriya.newreadermvvm.R
 import com.example.suriya.newreadermvvm.databinding.ListNewsFragmentBinding
 import com.example.suriya.newreadermvvm.model.news.Sources
-import com.example.suriya.newreadermvvm.repositories.ListNewsRepositories
-import com.example.suriya.newreadermvvm.view.base.BaseFragment
 import com.example.suriya.newreadermvvm.viewmodel.listnews.ListNewsViewModel
 import dagger.android.support.AndroidSupportInjection
 import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.rxkotlin.addTo
 import javax.inject.Inject
 
 class ListNewsFragment : Fragment() {

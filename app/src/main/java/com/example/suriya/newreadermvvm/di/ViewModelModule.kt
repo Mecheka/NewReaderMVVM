@@ -8,7 +8,8 @@ import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
 
-@Module(includes = [RepositoryModule::class])
+@Module(includes = [RepositoryModule::class,
+    AdapterModule::class])
 interface ViewModelModule {
 
     @Binds

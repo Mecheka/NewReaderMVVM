@@ -13,9 +13,7 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import com.example.suriya.newreadermvvm.R
 import com.example.suriya.newreadermvvm.databinding.FragmentMainBinding
-import com.example.suriya.newreadermvvm.repositories.NewsRepository
 import com.example.suriya.newreadermvvm.viewmodel.news.NewsViewModel
-import com.example.suriya.newreadermvvm.viewmodel.news.NewsViewModelFactory
 import dagger.android.support.AndroidSupportInjection
 import javax.inject.Inject
 

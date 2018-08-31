@@ -2,8 +2,8 @@ package com.example.suriya.newreadermvvm.viewmodel.listnews
 
 import android.arch.lifecycle.LifecycleObserver
 import android.arch.lifecycle.MutableLiveData
-import android.arch.lifecycle.ViewModel
 import android.util.Log
+import com.example.suriya.newreadermvvm.base.BaseViewModel
 import com.example.suriya.newreadermvvm.model.listnews.ArticleModel
 import com.example.suriya.newreadermvvm.model.news.Sources
 import com.example.suriya.newreadermvvm.repositories.ListNewsRepositories
@@ -15,14 +15,15 @@ import retrofit2.HttpException
 import javax.inject.Inject
 
 class ListNewsViewModel @Inject constructor(private val repository: ListNewsRepositories)
-    : ViewModel(), LifecycleObserver {
+    : BaseViewModel(), LifecycleObserver {
 
     private var compositeDisposable = CompositeDisposable()
     var urlImage = MutableLiveData<String>()
     var title = MutableLiveData<String>()
     var author = MutableLiveData<String>()
-    var listNewsAdapter: ListNewsAdapter = ListNewsAdapter()
     val showDialogLoading: PublishSubject<Boolean> = PublishSubject.create()
+    @Inject
+    lateinit var listNewsAdapter: ListNewsAdapter
 
     fun setSourceData(sources: Sources) {
         repository.loadNews(sources).subscribe({ news ->

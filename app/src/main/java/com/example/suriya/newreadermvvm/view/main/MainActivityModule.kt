@@ -1,6 +1,5 @@
 package com.example.suriya.newreadermvvm.view.main
 
-import com.example.suriya.newreadermvvm.view.listnews.ListNewsActivityModule
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 

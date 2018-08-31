@@ -1,4 +1,4 @@
-package com.example.suriya.newreadermvvm.view.base
+package com.example.suriya.newreadermvvm.base
 
 import android.app.ProgressDialog
 import android.support.v4.app.Fragment

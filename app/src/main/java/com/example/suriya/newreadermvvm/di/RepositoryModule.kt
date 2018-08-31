@@ -3,10 +3,8 @@ package com.example.suriya.newreadermvvm.di
 import com.example.suriya.newreadermvvm.repositories.ListNewsRepositories
 import com.example.suriya.newreadermvvm.repositories.NewsRepository
 import com.example.suriya.newreadermvvm.service.INewsService
-import dagger.Binds
 import dagger.Module
 import dagger.Provides
-import javax.inject.Inject
 
 @Module
 class RepositoryModule {
