@@ -68,7 +68,7 @@ fun setTextTime(view: RelativeTimeTextView, text: MutableLiveData<Date>) {
 
 @SuppressLint("SetJavaScriptEnabled")
 @BindingAdapter("loadWebsite")
-fun loadWebsite(view: WebView, url: String) {
+fun loadWebsite(view: WebView, url: String?) {
     view.settings.javaScriptEnabled = true
     view.webChromeClient = WebChromeClient()
     view.webViewClient = WebViewClient()

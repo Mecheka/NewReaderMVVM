@@ -24,10 +24,9 @@ class MainFragment : Fragment() {
     private lateinit var binding: FragmentMainBinding
 
     @Inject
-    lateinit var vieModelFactory: ViewModelProvider.Factory
-
+    lateinit var viewModelFactory: ViewModelProvider.Factory
     val newsViewModel: NewsViewModel by lazy {
-        ViewModelProviders.of(this, vieModelFactory)
+        ViewModelProviders.of(this, viewModelFactory)
                 .get(NewsViewModel::class.java)
     }
 

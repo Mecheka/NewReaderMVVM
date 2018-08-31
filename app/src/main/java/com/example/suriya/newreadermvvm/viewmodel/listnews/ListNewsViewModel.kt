@@ -1,5 +1,6 @@
 package com.example.suriya.newreadermvvm.viewmodel.listnews
 
+import android.arch.lifecycle.LifecycleObserver
 import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
 import android.util.Log
@@ -11,9 +12,10 @@ import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo
 import io.reactivex.subjects.PublishSubject
 import retrofit2.HttpException
+import javax.inject.Inject
 
-class ListNewsViewModel(val repository: ListNewsRepositories, sources: Sources)
-    : ViewModel() {
+class ListNewsViewModel @Inject constructor(private val repository: ListNewsRepositories)
+    : ViewModel(), LifecycleObserver {
 
     private var compositeDisposable = CompositeDisposable()
     var urlImage = MutableLiveData<String>()
@@ -21,10 +23,6 @@ class ListNewsViewModel(val repository: ListNewsRepositories, sources: Sources)
     var author = MutableLiveData<String>()
     var listNewsAdapter: ListNewsAdapter = ListNewsAdapter()
     val showDialogLoading: PublishSubject<Boolean> = PublishSubject.create()
-
-    init {
-        setSourceData(sources)
-    }
 
     fun setSourceData(sources: Sources) {
         repository.loadNews(sources).subscribe({ news ->

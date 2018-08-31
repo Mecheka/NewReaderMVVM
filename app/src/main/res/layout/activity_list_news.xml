@@ -6,10 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".view.listnews.ListNewsActivity">
 
-    <fragment
-        android:id="@+id/fragment"
+    <FrameLayout
+        android:id="@+id/contentContainer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:name="com.example.suriya.newreadermvvm.view.listnews.ListNewsFragment"/>
+        android:layout_height="match_parent"/>
 
 </RelativeLayout>
